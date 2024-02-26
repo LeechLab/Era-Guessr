@@ -2,8 +2,8 @@ name: Update Leaderboard
 
 on:
   push:
-  branches:
-    - main
+    branches:
+      - main
 
 jobs:
   update_leaderboard:
