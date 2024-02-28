@@ -15,9 +15,13 @@ async function updateLeaderboard(username, id, highscore, time, character) {
     const response = await fetch(apiUrl, {
       headers: {
         Authorization: `token ${accessToken}`
+          
       }
     });
-
+    if (!response.ok) {
+      console.error(`Failed to fetch current content from GitHub. Status: ${response.status}`);
+      return;
+    }
     const data = await response.json();
     const currentContent = atob(data.content);
     
