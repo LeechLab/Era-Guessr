@@ -19,7 +19,7 @@ async function updateLeaderboard(username, id, highscore, time, character) {
       }
     });
     if (!response.ok) {
-      console.error(`Failed to fetch current content from GitHub. Status: ${response.status}`, `URL: ${filePath}`);
+      console.error(`Failed to fetch current content from GitHub. Status: ${response.status}`, `URL: ${apiUrl}`);
       return;
     }
     const data = await response.json();
