@@ -52,6 +52,6 @@ async function updateLeaderboard(username, id, highscore, time, character) {
     });
 
     console.log('Leaderboard updated successfully!');
-    console.log('Data: '+NAME+'\n'+ID+'\n'+HIGHSCORE+'\n'+TIME+'\n'+CHARACTER);
+    console.log('Data: '+NAME+'\n'+ID+'\n'+SCORE+'\n'+TIME+'\n'+CHARACTER);
 }
 updateLeaderboard(NAME,ID,SCORE,TIME,CHARACTER);
