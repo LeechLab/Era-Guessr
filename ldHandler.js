@@ -4,12 +4,11 @@ const NAME = url.searchParams.getAll('user');
 const SCORE = url.searchParams.get('score');
 const TIME = url.searchParams.getAll('time');
 const CHARACTER = url.searchParams.get('character');
-const TYPE = url.searchParams.get('gamemode');
 const ACTION = url.searchParams.get('action');
 const accessToken = url.searchParams.get('token');
 const repoOwner = 'LeeechLabStudios';
 const repoName = 'era.guessr.database';
-const filePath = 'leaderboards'+TYPE+'.json';
+const filePath = 'leaderboards'+url.searchParams.get('gamemode').toString()+'.json';
 async function updateLeaderboard(username, id, highscore, time, character) {
     const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`;
     const response = await fetch(apiUrl, {
