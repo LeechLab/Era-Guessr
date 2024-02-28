@@ -1,4 +1,3 @@
-const fs = require('fs');
 const url = new URL(window.location.href);
 const ID = url.searchParams.get('id');
 const NAME = url.searchParams.getAll('user');
@@ -7,27 +6,48 @@ const TIME = url.searchParams.getAll('time');
 const CHARACTER = url.searchParams.get('character');
 const TYPE = url.searchParams.get('gamemode');
 const ACTION = url.searchParams.get('action');
+const accessToken = url.searchParams.get('token');
+const repoOwner = 'LeeechLabStudios';
+const repoName = 'era.guessr.database';
+const filePath = 'leaderboards'+TYPE+'.json';
+async function updateLeaderboard(username, id, highscore, time, character) {
+    const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`;
+    const response = await fetch(apiUrl, {
+      headers: {
+        Authorization: `token ${accessToken}`
+      }
+    });
 
-const rawData = fs.readFileSync('leaderboard'+TYPE+'.json');
-let leaderboardData = JSON.parse(rawData);
-
-function aouu(username, id, highscore, time, character) {
-    const userIndex = leaderboardData.leaderboards.findIndex(user => user[1] === id);
-    if (userIndex !== -1) {
-        leaderboardData.leaderboards[userIndex] = [username, id, highscore, time, character];
-    } else {
-        leaderboardData.leaderboards.push([username, id, highscore, time, character]);
+    const data = await response.json();
+    const currentContent = atob(data.content);
+    
+    const leaderboardData = JSON.parse(currentContent);
+    if (ACTION == "aouu"){
+        const userIndex = leaderboardData.leaderboards.findIndex(user => user[1] === id);
+        if (userIndex !== -1) {
+            leaderboardData.leaderboards[userIndex] = [username, id, highscore, time, character];
+        } else {
+            leaderboardData.leaderboards.push([username, id, highscore, time, character]);
+        }
     }
-    fs.writeFileSync('leaderboard'+TYPE+'.json', JSON.stringify(leaderboardData, null, 2));
-}
+    if (ACTION == "du"){
+        leaderboardData.leaderboards = leaderboardData.leaderboards.filter(user => user[1] !== id);
+    }
+    const updatedContent = btoa(JSON.stringify(leaderboardData, null, 2));
 
-function du(id) {
-    leaderboardData.leaderboards = leaderboardData.leaderboards.filter(user => user[1] !== id);
-    fs.writeFileSync('leaderboards.json', JSON.stringify(leaderboardData, null, 2));
+    await fetch(apiUrl, {
+      method: 'PUT',
+      headers: {
+        Authorization: `token ${accessToken}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        message: 'Update leaderboard',
+        content: updatedContent,
+        sha: data.sha
+      })
+    });
+
+    console.log('Leaderboard updated successfully!');
 }
-if(ACTION == "aouu"){
-  aouu(USERNAME,ID,SCORE,TIME,CHARACTER);
-}
-if(ACTION == "du"){
-  du(ID);
-}
+updateLeaderboard(NAME,ID,SCORE,TIME,CHARACTER);
