@@ -9,7 +9,7 @@ const accessToken = url.searchParams.get('token');
 const repoOwner = 'LeeechLabStudios';
 const repoName = 'era.guessr.database';
 const filePath = 'leaderboards'+url.searchParams.get('gamemode')+'.json';
-async function updateLeaderboard(username, id, highscore, time, character) {
+async function updateLeaderboard(newArray) {
     const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`;
     const response = await fetch(apiUrl, {
       headers: {
@@ -26,15 +26,15 @@ async function updateLeaderboard(username, id, highscore, time, character) {
     
     const leaderboardData = JSON.parse(currentContent);
     if (ACTION == "aouu"){
-        const userIndex = leaderboardData.leaderboards.findIndex(user => user[1] === id);
+        const userIndex = leaderboardData.leaderboards.findIndex(user => user[1] === ID);
         if (userIndex !== -1) {
-            leaderboardData.leaderboards[userIndex] = [username, id, highscore, time, character];
+            leaderboardData.leaderboards[userIndex] = newArray;
         } else {
-            leaderboardData.leaderboards.push([username, id, highscore, time, character]);
+            leaderboardData.leaderboards.push(newArray);
         }
     }
     if (ACTION == "du"){
-        leaderboardData.leaderboards = leaderboardData.leaderboards.filter(user => user[1] !== id);
+        leaderboardData.leaderboards = leaderboardData.leaderboards.filter(user => user[1] !== ID);
     }
     const updatedContent = btoa(JSON.stringify(leaderboardData, null, 2));
 
@@ -45,13 +45,12 @@ async function updateLeaderboard(username, id, highscore, time, character) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        message: 'Client Feat! Leaderboards Updated!',
+        message: '[AUTOMATED] Client Updated Leaderboards',
         content: updatedContent,
         sha: data.sha
       })
     });
 
     console.log('Leaderboard updated successfully!');
-    console.log('Data: '+NAME+'\n'+ID+'\n'+SCORE+'\n'+TIME+'\n'+CHARACTER);
 }
-updateLeaderboard(NAME,ID,SCORE,TIME,CHARACTER);
+updateLeaderboard([NAME,ID,SCORE,TIME,CHARACTER]);
