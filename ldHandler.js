@@ -45,7 +45,7 @@ async function updateLeaderboard(username, id, highscore, time, character) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        message: 'Update leaderboard',
+        message: 'Client Feat! Leaderboards Updated!',
         content: updatedContent,
         sha: data.sha
       })
