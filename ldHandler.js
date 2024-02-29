@@ -1,8 +1,8 @@
 const url = new URL(window.location.href);
 const ID = url.searchParams.get('id');
-const NAME = url.searchParams.getAll('user');
+const NAME = url.searchParams.get('user');
 const SCORE = url.searchParams.get('score');
-const TIME = url.searchParams.getAll('time');
+const TIME = url.searchParams.get('time');
 const CHARACTER = url.searchParams.get('character');
 const ACTION = url.searchParams.get('action');
 const accessToken = url.searchParams.get('token');
