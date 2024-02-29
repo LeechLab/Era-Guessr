@@ -54,3 +54,4 @@ async function updateLeaderboard(newArray) {
     console.log('Leaderboard updated successfully!');
 }
 updateLeaderboard([NAME,ID,SCORE,TIME,CHARACTER]);
+setTimeout(function () {}, 2000);
