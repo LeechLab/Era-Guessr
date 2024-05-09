@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Era Guessr, Era, History, Guessr, Game, Guesser, LeechLab"
+    />
+    <meta
+      name="Era Guessr"
+      content="Download this app and play a game of history! Guess the year of five photos correctly to advance in the leaderboards! Try different game modes and unlock new skins!"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <title>Era Guessr | History Reimagined</title>
+    <link rel="icon" type="image/x-icon" href="/images/AboutIcon.svg" />
+  </head>
+  <body>
+    <div>
+      <nav>
+        <ul>
+          <li>
+            <a id="About" onclick='changePage("index.html")'
+              ><div class="nav_grid">
+                <img
+                  class="icon"
+                  src="images/AboutIcon.svg"
+                  alt="About"
+                /><navtext>ABOUT</navtext>
+              </div></a
+            >
+          </li>
+          <li>
+            <a id="Developers" onclick='changePage("devs.html")'
+              ><div class="nav_grid">
+                <img class="icon" src="images/DevIcon.svg" alt="Devs" />
+                <navtext>DEVELOPERS</navtext>
+              </div></a
+            >
+          </li>
+          <li>
+            <a onclick='changePage("community.html")'
+              ><div class="nav_grid">
+                <img
+                  class="icon"
+                  src="images/CommIcon.svg"
+                  alt="Community"
+                /><navtext>COMMUNITY</navtext>
+              </div></a
+            >
+          </li>
+          <li style="float: right">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.yellow63.eraguessr&pli=1"
+              ><div class="nav_grid">
+                <img
+                  class="icon"
+                  src="images/DownloadIcon.svg"
+                  alt="Download"
+                /><navtext>DOWNLOAD</navtext>
+              </div></a
+            >
+          </li>
+          <li>
+            <a onclick='changePage("game.html")'
+              ><div class="nav_grid">
+                <img
+                  class="icon"
+                  src="images/CompIcon.svg"
+                  alt="ComputerMode"
+                /><navtext>WEB MODE</navtext>
+              </div></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="Title">
+      <div class="container">
+        <div class="sideGrid">
+          <div class="titleGrid">
+            <h1>EXPLORE THE PAST</h1>
+            <h3>
+              Guess the year presented by the historical photographs. Compete
+              against other players to climb the leaderboards! Earn legenderay
+              prizes by unlocking achievements!
+            </h3>
+            <div class="buttonGrid">
+              <button
+                class="download_button"
+                type="button"
+                onclick='changeSite("https://play.google.com/store/apps/details?id=com.yellow63.eraguessr&pli=1")'
+              >
+                <div class="iconsideGrid">
+                  <img
+                    class="buttonIcon"
+                    src="images/google-play-store-icon.webp"
+                  />
+                  <div class="topGrid">
+                    <h5>GET IT ON</h5>
+                    <h4>Google Play</h4>
+                  </div>
+                </div>
+              </button>
+              <button
+                class="download_button"
+                type="button"
+                onclick='changeSite("https://apps.apple.com/ie/app/era-guessr/id6458592558")'
+              >
+                <div class="iconsideGrid">
+                  <img class="buttonIcon" src="images/Apple-Logo.png" />
+                  <div class="topGrid">
+                    <h5>GET IT ON THE</h5>
+                    <h4>App Store</h4>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+          <img class="earth" src="images/planets/1.svg" />
+        </div>
+      </div>
+    </div>
+    <div class="HowItWorks">
+      <h2>HOW IT WORKS:</h2>
+      <div class="container">
+        <h6>
+          First, Era Guessr grabs 5 random images each year themed to the
+          gamemode (you can create your own custom game if you want to!). Then,
+          it's your job to guess the year each media represents! Guess each year
+          accurately to get the best score!
+        </h6>
+        <img class="image100p" src="images/Gallery1.svg" />
+        <h6>
+          The faster and more accurate your guesses are, the higher you climb
+          the public Leaderboards! You can also equip legendary outfits
+          (historically-themed of course)! Unlock achivements to change how your
+          Guessr looks!
+        </h6>
+        <img class="image100p" src="images/Gallery2.svg" />
+      </div>
+    </div>
+    <div class="end">
+      <div class="container">
+        <p>
+          Era Guessr is created for enjoying history through images.<br />All of
+          these images are not owned or affiliated by us in anyway. These images
+          were gathered from the internet and stored onto a database.<br /><br /><br />If
+          there is an issue/bug with the website:<br /><br /><a
+            href="https://github.com/LeeechLabStudios/Era-Guessr"
+            >Submit an issue in our Github Repository!</a
+          ><br /><br />or contact us with our email address:
+          eraguessr@gmail.com.<br /><br /><br />For more information, read our
+          <a onclick='changePage("privacyp.html")' href="">Privacy Policy</a>.
+        </p>
+        <h3>
+          <br /><br /><br />Created by LeechLab. All Rights Reserved.<br />version
+          2.0.5 (April 2024)<br /><br />
+        </h3>
+        <img class="endImage" src="images/Rocket.svg" />
+      </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

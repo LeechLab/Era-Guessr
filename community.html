@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Era Guessr, Era, History, Guessr, Game, Guesser, LeechLab"
+    />
+    <meta
+      name="Era Guessr"
+      content="Download this app and play a game of history! Guess the year of five photos correctly to advance in the leaderboards! Try different game modes and unlock new skins!"
+    />
+    <link rel="stylesheet" href="css/community.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <title>Era Guessr | History Reimagined</title>
+    <link rel="icon" type="image/x-icon" href="/images/AboutIcon.svg" />
+  </head>
+  <body>
+    <div>
+      <nav>
+        <ul>
+          <li>
+            <a id="About" onclick='changePage("index.html")'
+              ><div class="nav_grid">
+                <img
+                  class="icon"
+                  src="images/AboutIcon.svg"
+                  alt="About"
+                /><navtext>ABOUT</navtext>
+              </div></a
+            >
+          </li>
+          <li>
+            <a id="Developers" onclick='changePage("devs.html")'
+              ><div class="nav_grid">
+                <img class="icon" src="images/DevIcon.svg" alt="Devs" />
+                <navtext>DEVELOPERS</navtext>
+              </div></a
+            >
+          </li>
+          <li>
+            <a onclick='changePage("community.html")'
+              ><div class="nav_grid">
+                <img
+                  class="icon"
+                  src="images/CommIcon.svg"
+                  alt="Community"
+                /><navtext>COMMUNITY</navtext>
+              </div></a
+            >
+          </li>
+          <li style="float: right">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.yellow63.eraguessr&pli=1"
+              ><div class="nav_grid">
+                <img
+                  class="icon"
+                  src="images/DownloadIcon.svg"
+                  alt="Download"
+                /><navtext>DOWNLOAD</navtext>
+              </div></a
+            >
+          </li>
+          <li>
+            <a onclick='changePage("game.html")'
+              ><div class="nav_grid">
+                <img
+                  class="icon"
+                  src="images/CompIcon.svg"
+                  alt="ComputerMode"
+                /><navtext>WEB MODE</navtext>
+              </div></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="Title">
+      <div class="container">
+        <h1>JOIN OUR COMMUNITY!</h1>
+        <div class="sidebGrid">
+          <img class="regImage" src="images/CommunityImage.svg" alt="About" />
+          <h2>
+            Compete with others and reach the top of the leaderboards! We would
+            appreciate it if you could spread the news of Era Guessr to expand
+            the player base! Please share your skins, stats, or custom gamemodes
+            with others, or submit your ideas for new content!
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="container">
+        <h4>LEADERBOARDS</h4>
+        <div class="sidebGrid">
+          <div class="topGrid">
+            <img class="arrow" id="previous" src="images/iconArrowLeft.svg" />
+            <div class="middleco">
+              <h5 class="gamemode_text">GAMEMODE</h5>
+              <h5 id="name" class="gamemode_title">CLASSIC</h5>
+              <h5 class="gamemode_description">
+                (click the arrows to view different leaderboards)
+              </h5>
+              <img class="earth" id="earth" src="images/planets/1.svg" />
+            </div>
+            <img class="arrow" src="images/iconArrowRight.svg" id="next" />
+          </div>
+          <div class="scrollList" id="scrollList"></div>
+        </div>
+      </div>
+    </div>
+    <div class="Ideas">
+      <div class="container">
+        <h1>SUBMIT YOUR IDEAS</h1>
+        <div class="ideaBox">
+          <div class="sidebGrid">
+            <img class="phaseImage" src="images/IdeaImage.svg" />
+            <div>
+              <div class="phase1" id="phase1">
+                <div class="containerc">
+                  <h5 class="ideaTitle">
+                    COMPLETE THIS SURVEY TO SUBMIT YOUR IDEA!
+                  </h5>
+                  <h5 class="ideaDescription">
+                    We consider every single submission, so please let us know
+                    what we should add/fix next.
+                  </h5>
+                  <button
+                    class="button"
+                    type="button"
+                    onclick="changeIdeaPage('phase2')"
+                  >
+                    START
+                  </button>
+                </div>
+              </div>
+              <div class="phase2" id="phase2">
+                <div class="containerc">
+                  <h5 class="ideaTitle">WHAT IS YOUR IDEA?</h5>
+                  <div class="quadrantGrid">
+                    <button
+                      class="button"
+                      type="button"
+                      onclick="changeIdeaPage('phase3.1')"
+                    >
+                      FACE
+                    </button>
+                    <button
+                      class="button"
+                      type="button"
+                      onclick="changeIdeaPage('phase3.2')"
+                    >
+                      HISTORICAL PHOTO
+                    </button>
+                    <button
+                      class="button"
+                      type="button"
+                      onclick="changeIdeaPage('phase3.3')"
+                    >
+                      OUTFIT
+                    </button>
+                    <button
+                      class="button"
+                      type="button"
+                      onclick="changeIdeaPage('phase3.4')"
+                    >
+                      GAME DESIGN
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="phase3" id="phase3.1">
+                <div class="containerc">
+                  <h5 class="ideaTitle">DESCRIBE THE FACE:</h5>
+                  <input type="text" id="FACEDescription" class="textbox" />
+                  <h5 class="ideaTitle">IMAGE URL:</h5>
+                  <h5 class="ideaDescription">
+                    Giving us an image about your idea might help us understand
+                    what you want.
+                  </h5>
+                  <input type="text" id="FACEURL" class="textbox" />
+                  <div class="sidebGrid">
+                    <button
+                      class="button alternateButton"
+                      type="button"
+                      onclick="changeIdeaPage('phase2')"
+                    >
+                      < BACK
+                    </button>
+                    <button class="button" type="button" onclick="submitIdea()">
+                      SUBMIT
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="phase3" id="phase3.3">
+                <div class="containerc">
+                  <h5 class="ideaTitle">DESCRIBE THE OUTFIT:</h5>
+                  <input type="text" id="OUTFITDescription" class="textbox" />
+                  <h5 class="ideaTitle">IMAGE URL:</h5>
+                  <h5 class="ideaDescription">
+                    Giving us an image about your idea might help us understand
+                    what you want.
+                  </h5>
+                  <input type="text" id="OUTFITURL" class="textbox" />
+                  <div class="sidebGrid">
+                    <button
+                      class="button alternateButton"
+                      type="button"
+                      onclick="changeIdeaPage('phase2')"
+                    >
+                      < BACK
+                    </button>
+                    <button class="button" type="button" onclick="submitIdea()">
+                      SUBMIT
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="phase3" id="phase3.2">
+                <div class="containerc">
+                  <h5 class="ideaTitle">DESCRIBE THE HISTORICAL IMAGE:</h5>
+                  <h5 class="ideaDescription">
+                    Please describe the historical importance, the year the
+                    image represents, and the type of media (sculpture,
+                    photograph, painting, ect).
+                  </h5>
+                  <input type="text" id="IMAGEDescription" class="textbox" />
+                  <h5 class="ideaTitle">IMAGE URL:</h5>
+                  <input type="text" id="IMAGEURL" class="textbox" />
+                  <div class="sidebGrid">
+                    <button
+                      class="button alternateButton"
+                      type="button"
+                      onclick="changeIdeaPage('phase2')"
+                    >
+                      < BACK
+                    </button>
+                    <button class="button" type="button" onclick="submitIdea()">
+                      SUBMIT
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="phase3" id="phase3.4">
+                <div class="containerc">
+                  <h5 class="ideaTitle">DESCRIBE THE GAMEPLAY IDEA:</h5>
+                  <h5 class="ideaDescription">
+                    Please describe the importance of adding your idea to the
+                    game. If you have found an error/bug, please include the
+                    words "I have found a bug".
+                  </h5>
+                  <input type="text" id="GAMEPLAYDescription" class="textbox" />
+                  <div class="sidebGrid">
+                    <button
+                      class="button alternateButton"
+                      type="button"
+                      onclick="changeIdeaPage('phase2')"
+                    >
+                      < BACK
+                    </button>
+                    <button class="button" type="button" onclick="submitIdea()">
+                      SUBMIT
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="phase4" id="phase4">
+                <div class="containerc">
+                  <h5 class="ideaTitle">THANKS FOR YOUR INPUT!</h5>
+                  <h5 class="ideaDescription">
+                    We appreciate your ideas! People like you help Era Guessr be
+                    more enjoyable for others!
+                  </h5>
+                  <button
+                    class="button"
+                    type="button"
+                    onclick="changeIdeaPage('phase2')"
+                  >
+                    SUBMIT ANOTHER IDEA
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="end">
+        <div class="container">
+          <p>
+            Era Guessr is created for enjoying history through images.<br />All
+            of these images are not owned or affiliated by us in anyway. These
+            images were gathered from the internet and stored onto a
+            database.<br /><br /><br />If there is an issue/bug with the
+            website:<br /><br /><a
+              href="https://github.com/LeeechLabStudios/Era-Guessr"
+              >Submit an issue in our Github Repository!</a
+            ><br /><br />or contact us with our email address:
+            eraguessr@gmail.com.<br /><br /><br />For more information, read our
+            <a onclick='changePage("privacyp.html")' href="">Privacy Policy</a>.
+          </p>
+          <h3>
+            <br /><br /><br />Created by LeechLab. All Rights Reserved.<br />version
+            2.0.5 (April 2024)<br /><br />
+          </h3>
+          <img class="endImage" src="images/Rocket.svg" />
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
