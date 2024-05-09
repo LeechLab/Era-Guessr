@@ -1,0 +1,149 @@
+
+.iconsideGrid{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap:30px;
+    width:100%;
+}
+.topGrid{
+    display: grid;
+    grid-template-rows: 40% 60%;
+}
+.titleGrid{
+    display: grid;
+    grid-template-rows: 25% 25% 25%;
+    gap: 15px;
+}
+.buttonGrid{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    gap: 10px;
+}
+.Title{
+    overflow: visible;
+    width: 100%;
+    height:800px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background: linear-gradient(#45b7ff,#240292);
+}
+.Title::before{
+    content:'';
+    z-index: 1;
+    width:100%;
+    position:absolute;
+    height:500px;
+    top:700px;
+    right:0;
+    left:0;
+    background:#eee;
+    -webkit-transform:skewY(2deg);
+    -moz-transform: skewY(2deg);
+    -ms-transform: skewY(2deg);
+    transform:skewY(2deg);
+}
+.buttonIcon{
+    width:100%;
+    padding-left: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.download_button{
+    margin-top: 30px;
+    border-radius: 15px;
+    width:75%;
+    height:50px;
+    border: 0;
+    background-color:#00000033;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+    transition:0.24s;
+}
+.download_button:hover{
+    background-color:#240292;
+    transition:0.24s;
+}
+.earth{
+    position: relative;
+    top:60px;
+    width:100%;
+    animation-timing-function: smooth;
+    animation-name: earthRotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes earthRotate {
+    0% {rotate:20deg}
+    50% {rotate:0deg}
+    100% {rotate:20deg}
+  }
+
+h1{
+    font-weight: 900;
+    font-size: 45px;
+    color: #eee;
+    user-select: text;
+}
+h4{
+    font-weight: 900;
+    font-size: 20px;
+    color: #eee;
+    text-align: left;
+    font-family: 'Fredoka', sans-serif;
+    user-select: text;
+}
+h5{
+    font-weight: 900;
+    font-size: 13px;
+    color: #eee;
+    text-align: left;
+    font-family: 'Fredoka', sans-serif;
+    user-select: text;
+}
+.HowItWorks{
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.HowItWorks::before{
+    content:'';
+    z-index: 2;
+    width:100%;
+    position:absolute;
+    height:500px;
+    top:1300px;
+    right:0;
+    left:0;
+    background:#333;
+    -webkit-transform:skewY(-2deg);
+    -moz-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+    transform:skewY(-2deg);
+}
+h2{
+    color: var(--primary-color);
+    font-weight: 900;
+    font-size: 35px;
+    text-align: center;
+    user-select: text;
+}
+h6{
+    color: #333;
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+    line-height: 25px;
+    user-select: text;
+}
+.image100p{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    animation-timing-function: smooth;
+    animation-name: regRot;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

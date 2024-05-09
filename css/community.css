@@ -1,0 +1,316 @@
+.Title{
+    overflow: visible;
+    width: 100%;
+    height:700px;
+    padding-top: 75px;
+    padding-bottom: 150px;
+    background: linear-gradient(#932b93,#4e2476);
+}
+.Title::before{
+    content:'';
+    z-index: 1;
+    width:100%;
+    position:absolute;
+    height:100px;
+    top:650px;
+    right:0;
+    left:0;
+    background:#eee;
+    -webkit-transform:skewY(2deg);
+    -moz-transform: skewY(2deg);
+    -ms-transform: skewY(2deg);
+    transform:skewY(2deg);
+}
+h1{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-weight: 900;
+    color:#eee;
+    font-size:40px;
+    user-select: text;
+}
+h2{
+    text-align: right;
+    font-weight: 100;
+    color:#eee;
+    user-select: text;
+    font-size:20px;
+}
+.sidebGrid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    overflow-x: visible;
+    gap: 10px;
+}
+.topGrid{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    background: linear-gradient(#932b93,#4e2476);
+    border-radius: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.middleco{
+    display: grid;
+    grid-template-rows: 10% 15% 17% 58%;
+    height:350px;
+}
+h5{
+    text-align: center;
+    font-weight: 900;
+    color:#5f97ff;
+    font-size:20px;
+    user-select: text;
+}
+.regImage{
+    width:90%;
+    position: relative;
+    padding-bottom: 50px;
+    animation-timing-function: smooth;
+    animation-name: regRot;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+h4{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-weight: 900;
+    color:#932b93;
+    font-size:30px;
+    user-select: text;
+}
+.gamemode_text{
+    text-align: center;
+    font-weight: 100;
+    color:var(--secondary-color);
+    font-size:16px;
+    user-select: text;
+}
+.gamemode_title{
+    text-align: center;
+    font-weight: 900;
+    color:#eee;
+    font-size:25px;
+    user-select: text;
+}
+.gamemode_description{
+    text-align: center;
+    font-weight: 100;
+    color:var(--secondary-color);
+    font-size:14px;
+    padding-bottom: 50px;
+    user-select: text;
+}
+.earth{
+    width:100%;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    animation-timing-function: smooth;
+    animation-name: regRot;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.arrow{
+    width:60%;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.75;
+    transition: 0.1s;
+}
+.arrow:hover{
+    opacity: 1;
+    transition: 0.1s;
+}
+.leaderboardGrid{
+    display: grid;
+    grid-template-columns: 15% 45% 20% 20%;
+    background: #00000099;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.diff{
+    display: grid;
+    grid-template-columns: 15% 45% 20% 20%;
+    background: #00000099;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+h6{
+    text-align: left;
+    font-weight: 900;
+    color:#eee;
+    font-size:14px;
+    user-select: text;
+}
+.leaderboardGrid{
+    display: grid;
+    grid-template-columns: 15% 45% 20% 20%;
+    background: #00000099;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.headerLeader{
+    display: grid;
+    grid-template-columns: 15% 45% 20% 20%;
+    border-radius: 0px;
+    color:#333;
+    background: #00000000;
+    user-select: text;
+}
+.headerLeader h6{
+    user-select: text;
+    color:#333;
+}
+.scrollList{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height:450px;
+    background-color: #bbb;
+    border-radius: 20px;
+}
+.Ideas{
+    overflow: visible;
+    width: 100%;
+    height:1050px;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    background: #4e2476;
+}
+.Ideas h1{
+    font-size:30px;
+    user-select: text;
+}
+.ideaBox{
+    background-color: #932b93;
+    border-radius: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    overflow: visible;
+}
+.phaseImage{
+    width:100%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    animation-timing-function: smooth;
+    animation-name: regRot;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    
+}
+.ideaDescription{
+    text-align: left;
+    font-weight: 900;
+    color:var(--secondary-color);
+    font-size:14px;
+    padding-top: 5px;
+    user-select: text;
+}
+.phase1 .button{
+    margin-top: 50px;
+}
+.phase4 .button{
+    margin-top: 50px;
+}
+.phase2 .button{
+    width:100px;
+    aspect-ratio: 1/1;
+}
+.ideaTitle{
+    text-align: left;
+    font-weight: 900;
+    color:#eee;
+    font-size:20px;
+    user-select: text;
+}
+.containerc{
+    width: 100%;
+    max-width: 1000px;
+    height:100%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    overflow: visible;
+}
+.button{
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width:75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #eee;
+    font-weight: 900;
+    border:0;
+    user-select: text;
+    font-family: 'Fredoka', sans-serif;
+    user-select: text;
+    background-color: #ffb7008a;
+    transition:0.24s;
+}
+.alternateButton{
+    background-color: #3333338a;
+}
+.button:hover{
+    transition:0.24s;
+    background-color: #4e24768a;
+}
+.quadrantGrid{
+    margin-top:15px;
+    display: grid;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-row: auto auto;
+    aspect-ratio: 1/1;
+}
+.textbox{
+    width: 100%;
+    border-radius: 20px;
+    border:0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    user-select: text;
+    font-family: 'Fredoka', sans-serif;
+    user-select: text;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color:#333;
+}
+.file{
+    width: 100%;
+    border:0;
+    font-family: 'Fredoka', sans-serif;
+    user-select: text;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

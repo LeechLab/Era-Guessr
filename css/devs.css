@@ -1,0 +1,112 @@
+.Title{
+    overflow: visible;
+    width: 100%;
+    height:2250px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background: linear-gradient(#45b7ff,#240292);
+}
+.devIcon{
+    padding-top: 75px;
+    width:30%;
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+    animation-timing-function: smooth;
+    animation-name: devRot;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.negdevIcon{
+    padding-top: 75px;
+    width:30%;
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+    animation-timing-function: smooth;
+    animation-name: negdevRot;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.miniDev{
+    width:60%;
+}
+.miniDev2{
+    width:60%;
+    margin-top: 50px;
+}
+h1{
+    text-align: center;
+    color:#eee;
+    font-size:40px;
+    font-weight: 900;
+    user-select: text;
+}
+h2{
+    text-align: center;
+    color:#eee;
+    font-size:30px;
+    padding-top: 30px;
+    font-weight: 900;
+    user-select: text;
+}
+h4{
+    text-align: center;
+    color:#eee;
+    font-size:18px;
+    font-weight: 100;
+    padding-top: 30px;
+    width:60%;
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+    user-select: text;
+}
+.nando{
+    text-shadow: #14c182 0 3px;
+}
+.brandon{
+    text-shadow: #249e28 0 3px;
+}
+.dave{
+    text-shadow: #ce5d3e 0 2.5px;
+    font-size:25px;
+}
+.ricky{
+    text-shadow: #4d6bff 0 2.5px;
+    font-size:25px;
+}
+.nick{
+    text-shadow: #a79819 0 2.5px;
+    font-size:25px;
+}
+.three_grid{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    overflow: visible;
+}
+@keyframes devRot {
+    0% {rotate:7deg}
+    50% {rotate:-7deg}
+    100% {rotate:7deg}
+  }
+@keyframes negdevRot {
+    0% {rotate:-7deg}
+    50% {rotate:7deg}
+    100% {rotate:-7deg}
+  }
+.Title::before{
+    content:'';
+    z-index: 1;
+    width:100%;
+    position:absolute;
+    height:150px;
+    top:2200px;
+    right:0;
+    left:0;
+    background:#333;
+    -webkit-transform:skewY(2deg);
+    -moz-transform: skewY(2deg);
+    -ms-transform: skewY(2deg);
+    transform:skewY(2deg);
+}
